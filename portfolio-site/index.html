@@ -214,6 +214,23 @@
     <!-- Updated to v15 for cache busting -->
     <script src="main.js?v=15"></script>
 
+    <script src="data.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        window.projects.forEach(project => {
+            // Procura o bloco que tem o onclick com o ID do projeto
+            const block = document.querySelector(`[onclick*="id=${project.id}"]`);
+            if (block && project.cover) {
+                block.style.backgroundImage = `url('${project.cover}')`;
+                block.style.backgroundSize = 'cover';
+                block.style.backgroundPosition = 'center';
+                // Remove o fundo preto para mostrar a imagem
+                block.style.backgroundColor = 'transparent'; 
+            }
+        });
+    });
+</script>
 </body>
+
 
 </html>
