@@ -1,16 +1,20 @@
 // Export removed for file:// compatibility
 window.projects = [
     // Section 1 Content
-    {
+    {  {
         type: 'project',
         id: 'p1',
         title: 'Serrala',
         tags: 'Digital • Branding • Creative',
-        description: 'Serrala is a global innovator in financial automation software. The project involved a complete rebranding and digital overhaul to reflect their forward-thinking approach.',
-        image: 'images/serrala/capa.webp',
+        description: 'Descrição do projeto Serrala...',
+        cover: 'images/serrala/capa.webp', // Imagem que aparece na HOME
+        gallery: [
+            'images/serrala/interna-1.png', // Imagens que aparecem dentro do projeto
+            'images/serrala/interna-2.png'
+        ],
         isLarge: true,
         bg: 'black'
-    },
+    },,
     {
         type: 'project',
         id: 'p2',
@@ -112,5 +116,6 @@ window.projects = [
         bg: 'black'
     }
 ];
+
 
 
