@@ -1,29 +1,24 @@
 // Export removed for file:// compatibility
 window.projects = [
+    // Section 1 Content
     {
+        type: 'project',
         id: 'p1',
         title: 'Serrala',
         tags: 'Digital • Branding • Creative',
-        description: 'Serrala is a global innovator in financial automation...',
-        cover: 'images/serrala/capa.png', 
-        gallery: [
-            'images/serrala/capa.webp',
-            'images/serrala/interna-1.png'
-        ],
+        description: 'Serrala is a global innovator in financial automation software. The project involved a complete rebranding and digital overhaul to reflect their forward-thinking approach.',
+        image: 'images/serrala/capa.png',
+        isLarge: true,
         bg: 'black'
     },
     {
+        type: 'project',
         id: 'p2',
         title: 'Rock in Rio',
         tags: 'Branding • Motion • Social',
-        description: 'Music festival campaigns...',
-        cover: 'images/rock-in-rio/capa.webp',
-        gallery: [
-            'images/rock-in-rio/interna-1.webp'
-        ],
+        description: 'One of the largest music festivals in the world. The work included dynamic motion graphics for social media campaigns and on-site branding experiences.',
+        image: 'images/rock-in-rio/capa.png',
         bg: 'black'
-    }
-];
     },
     {
         type: 'decoration',
@@ -38,7 +33,7 @@ window.projects = [
         tags: 'Packaging • Print • Experience',
         description: 'Creating a delightful unboxing experience for meal kit subscribers through playful packaging design and printed collateral.',
         bg: 'black',
-        image: 'images/marleyspoon/capa.webp'
+        image: 'images/marleyspoon/capa.png'
     },
     {
         type: 'project',
@@ -117,7 +112,3 @@ window.projects = [
         bg: 'black'
     }
 ];
-
-
-
-
