@@ -212,25 +212,25 @@
 
     <!-- Scripts -->
     <!-- Updated to v15 for cache busting -->
-    <script src="main.js?v=15"></script>
-
-    <script src="data.js"></script>
+<script src="data.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // Esta função varre o seu data.js e coloca as fotos nos quadrados pretos
         window.projects.forEach(project => {
-            // Procura o bloco que tem o onclick com o ID do projeto
+            // Procura o bloco que tem o link para o ID do projeto (ex: id=p1)
             const block = document.querySelector(`[onclick*="id=${project.id}"]`);
-            if (block && project.cover) {
-                block.style.backgroundImage = `url('${project.cover}')`;
+            
+            // Se o bloco existir e tiver uma imagem definida no data.js
+            if (block && project.image) {
+                block.style.backgroundImage = `url('${project.image}')`;
                 block.style.backgroundSize = 'cover';
                 block.style.backgroundPosition = 'center';
-                // Remove o fundo preto para mostrar a imagem
-                block.style.backgroundColor = 'transparent'; 
+                block.style.backgroundColor = 'transparent'; // Remove o preto
             }
         });
-    });
 </script>
 </body>
 
 
 </html>
+
