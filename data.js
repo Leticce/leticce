@@ -1,13 +1,23 @@
 // Export removed for file:// compatibility
-window.projects = [
-    // Section 1 Content
+window.window.projects = [
     {
         type: 'project',
         id: 'p1',
         title: 'Serrala',
         tags: 'Digital • Branding • Creative',
-        description: 'Serrala is a global innovator in financial automation software. The project involved a complete rebranding and digital overhaul to reflect their forward-thinking approach.',
-        image: '',
+        description: 'Descrição do projeto Serrala...',
+        cover: 'images/serrala/capa.webp', // Imagem que aparece na HOME
+        gallery: [
+            'images/serrala/interna-1.png', // Imagens que aparecem dentro do projeto
+            'images/serrala/interna-1.png', 
+            'images/serrala/interna-2.png', 
+            'images/serrala/interna-3.png', 
+            'images/serrala/interna-4.png',
+            'images/serrala/interna-5.png',
+            'images/serrala/interna-6.png',
+            'images/serrala/interna-7.png',
+            'images/serrala/interna-8.png'
+        ],
         isLarge: true,
         bg: 'black'
     },
@@ -16,9 +26,23 @@ window.projects = [
         id: 'p2',
         title: 'Rock in Rio',
         tags: 'Branding • Motion • Social',
-        description: 'One of the largest music festivals in the world. The work included dynamic motion graphics for social media campaigns and on-site branding experiences.',
-        image: '',
+        description: 'Descrição do Rock in Rio...',
+        cover: 'images/rock-in-rio/capa.webp',
+        gallery: [
+            'images/rock-in-rio/interna-0.gif',
+            'images/rock-in-rio/interna-1.webp',
+            'images/rock-in-rio/interna-2.webp',
+            'images/rock-in-rio/interna-3.gif',
+            'images/rock-in-rio/interna-4.webp',
+            'images/rock-in-rio/interna-5.webp',
+            'images/rock-in-rio/interna-6.webp',
+            'images/rock-in-rio/interna-7.webp',
+            'images/rock-in-rio/interna-8.webp'
+        ],
         bg: 'black'
+    }
+    // Repita o padrão para os outros IDs (p3, p4...)
+];
     },
     {
         type: 'decoration',
@@ -111,3 +135,4 @@ window.projects = [
         bg: 'black'
     }
 ];
+
