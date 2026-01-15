@@ -33,7 +33,7 @@ window.projects = [
         tags: 'Packaging • Print • Experience',
         description: 'Creating a delightful unboxing experience for meal kit subscribers through playful packaging design and printed collateral.',
         bg: 'black',
-        image: 'images/marleyspoon/capa.png'
+        image: 'images/marleyspoon/capa.webp'
     },
     {
         type: 'project',
@@ -112,4 +112,5 @@ window.projects = [
         bg: 'black'
     }
 ];
+
 
