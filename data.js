@@ -1,28 +1,29 @@
 // Export removed for file:// compatibility
 window.projects = [
-    // Section 1 Content
-    {  {
-        type: 'project',
+    {
         id: 'p1',
         title: 'Serrala',
         tags: 'Digital • Branding • Creative',
-        description: 'Descrição do projeto Serrala...',
-        cover: 'images/serrala/capa.webp', // Imagem que aparece na HOME
+        description: 'Serrala is a global innovator in financial automation...',
+        cover: 'images/serrala/capa.png', 
         gallery: [
-            'images/serrala/interna-1.png', // Imagens que aparecem dentro do projeto
-            'images/serrala/interna-2.png'
+            'images/serrala/capa.webp',
+            'images/serrala/interna-1.png'
         ],
-        isLarge: true,
         bg: 'black'
-    },,
+    },
     {
-        type: 'project',
         id: 'p2',
         title: 'Rock in Rio',
         tags: 'Branding • Motion • Social',
-        description: 'One of the largest music festivals in the world. The work included dynamic motion graphics for social media campaigns and on-site branding experiences.',
-        image: 'images/rock-in-rio/capa.webp',
+        description: 'Music festival campaigns...',
+        cover: 'images/rock-in-rio/capa.webp',
+        gallery: [
+            'images/rock-in-rio/interna-1.webp'
+        ],
         bg: 'black'
+    }
+];
     },
     {
         type: 'decoration',
@@ -116,6 +117,7 @@ window.projects = [
         bg: 'black'
     }
 ];
+
 
 
 
