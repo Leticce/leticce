@@ -140,59 +140,53 @@
     </div>
 
     <!-- Data Source -->
-    <script src="data.js"></script>
-    <!-- Main JS for BackToTop -->
-    <script src="main.js?v=15"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const projectId = params.get('id');
+  <script src="data.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get('id');
+        const project = window.projects.find(p => p.id === projectId);
 
-            if (!projectId || !window.projects) {
-                document.getElementById('project-main').innerHTML = '<h2 style="text-align:center; padding: 100px;">Project not found.</h2>';
-                return;
-            }
+        if (!project) {
+            document.getElementById('project-main').innerHTML = '<p>Project not found.</p>';
+            return;
+        }
 
-            const project = window.projects.find(p => p.id === projectId);
+        // Gera o HTML da Galeria dinamicamente
+        const galleryHtml = project.gallery && project.gallery.length > 0 
+            ? project.gallery.map(img => `
+                <div class="gallery-item">
+                    <img src="${img}" alt="${project.title}" style="width: 100%; height: auto; margin-bottom: 20px; display: block;">
+                </div>
+            `).join('')
+            : `<div class="gallery-item" style="height:300px; background:#eee; display:flex; align-items:center; justify-content:center;">No images available</div>`;
 
-            if (!project) {
-                document.getElementById('project-main').innerHTML = '<h2 style="text-align:center; padding: 100px;">Project not found.</h2>';
-                return;
-            }
+        const html = `
+            <section class="project-hero">
+                <h1>${project.title}</h1>
+                <div class="project-tags">${project.tags}</div>
+            </section>
+            
+            <section class="project-content">
+                <div class="project-description">
+                    ${project.description}
+                    <br><br>
+                    <p><strong>Services:</strong> ${project.tags}</p>
+                </div>
 
-            // Render Project
-            const html = `
-                <section class="project-hero">
-                    <h1>${project.title}</h1>
-                    <div class="project-tags">${project.tags}</div>
-                </section>
-                
-                <section class="project-content">
-                    <div class="project-description">
-                        ${project.description || 'Project description currently unavailable. Please check back later for more details on this case study.'}
-                        <br><br>
-                        <p><strong>Services:</strong> ${project.tags}</p>
-                    </div>
+                <div class="project-gallery">
+                    ${galleryHtml}
+                </div>
 
-                    <div class="project-gallery">
-                        ${project.image ?
-                    `<div class="gallery-item">
-                                <img src="${project.image}" alt="${project.title} Highlight">
-                            </div>` :
-                    `<div class="gallery-item" style="height: calc(600 * var(--s)); background: ${project.bg || '#ddd'}; display:flex; align-items:center; justify-content:center; color:white; font-size:20px;">
-                                Project Highlight Image (No Source)
-                            </div>`
-                }
-                    </div>
+                <a href="index.html" class="back-link">← Back to Projects</a>
+            </section>
+        `;
 
-                    <a href="index.html" class="back-link">← Back to Projects</a>
-                </section>
-            `;
-
-            document.getElementById('project-main').innerHTML = html;
-            document.title = `${project.title} - Leticce`;
-        });
+        document.getElementById('project-main').innerHTML = html;
+        document.title = `${project.title} - Leticce`;
+    });
     </script>
 </body>
+
 
 </html>
