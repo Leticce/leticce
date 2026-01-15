@@ -7,7 +7,7 @@ window.projects = [
         title: 'Serrala',
         tags: 'Digital • Branding • Creative',
         description: 'Serrala is a global innovator in financial automation software. The project involved a complete rebranding and digital overhaul to reflect their forward-thinking approach.',
-        image: 'images/serrala/capa.png',
+        image: 'images/serrala/capa.webp',
         isLarge: true,
         bg: 'black'
     },
@@ -17,7 +17,7 @@ window.projects = [
         title: 'Rock in Rio',
         tags: 'Branding • Motion • Social',
         description: 'One of the largest music festivals in the world. The work included dynamic motion graphics for social media campaigns and on-site branding experiences.',
-        image: 'images/rock-in-rio/capa.png',
+        image: 'images/rock-in-rio/capa.webp',
         bg: 'black'
     },
     {
@@ -112,3 +112,4 @@ window.projects = [
         bg: 'black'
     }
 ];
+
